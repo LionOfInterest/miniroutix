@@ -1,0 +1,26 @@
+{%extends "layout.html" %}
+
+{%block content %}
+<br>
+<div class="content-section" style="border-radius: 10px;">
+    <center><h1>Choisissez le mini-routeur</h1></center>
+    <br>
+    <div class="container">
+        <div class="row">
+        <div class="col-sm" style=" background-color:rgb(238, 238, 238); margin-left: 10px; margin-top: 50px; ">
+            <br>
+            <center><a class="navbar-brand mr-4" href="/firmware/750"><img height="150 px" src="{{ url_for('static', filename='images/AR750.png') }}" alt="Logo MiNET"></a></center>
+            <center> <a href="/firmware/750/00-00-36-00-00-01_10.30.01.01">GL-AR750</a> </center>
+            <center><small style="font-size: .6em;"><a href="https://www.gl-inet.com/products/gl-ar750/">En savoir plus</a></small></center>
+            <br>
+        </div>
+        <div class="col-sm" style=" background-color: rgb(238, 238, 238); margin-left: 10px; margin-top: 50px;">
+            <br>
+        <center> <a class="navbar-brand mr-4" href="/firmware/750s"><img height="150 px" src="{{ url_for('static', filename='images/AR750S.png') }}" alt="Logo MiNET"></a> </center>
+        <center> <a href="/firmware/750/00-00-36-00-00-01_10.30.01.01">GL-AR750S</a> </center>
+        <center><small style="font-size: .6em;"><a href="https://www.gl-inet.com/products/gl-ar750s/">En savoir plus</a></small></center>
+        <br>
+        </div>
+    </div>
+</div>
+{%endblock content%}

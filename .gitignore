@@ -1,0 +1,8 @@
+scripts/
+venv/
+test.sqlite3
+__pycache__/
+**/__pycache__/
+.env
+wg0.conf
+.idea

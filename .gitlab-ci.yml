@@ -1,0 +1,24 @@
+stages:
+  - deploy
+
+deploy-job:
+  stage: deploy
+  before_script:
+      - sudo systemctl stop miniroutix.service
+      - sudo pip3 install -r src/requirements.txt
+  script:
+    - echo "Deploying application..."
+    - cp /home/gitlab-runner/.env src/
+    - echo $PWD
+    - cat miniroutix-template.ini | envsubst | tee miniroutix.ini
+    - sudo rm /opt/miniroutix.ini
+    - sudo ln -s ${PWD}/miniroutix.ini /opt/miniroutix.ini
+    - sudo systemctl start miniroutix.service
+    - echo "Application successfully deployed."
+  environment:
+    name: miniroutix
+    #url: https://miniroutix.minet.net
+  tags:
+      - miniroutix
+  only:
+      - main

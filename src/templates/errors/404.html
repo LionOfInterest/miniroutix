@@ -1,0 +1,17 @@
+{%extends "layout.html" %}
+
+{%block content %}
+
+<br>
+
+<center><video controls autoplay width="480">
+
+    <source src="{{ url_for('static', filename='videos/404.mp4') }}"
+            type="video/mp4">
+
+    Sorry, your browser doesn't support embedded videos.
+</video>
+</center>
+<br>
+<center> <b> <h1>Erreur 404 </h1> <br><h2>{{error}}</h2></b> </center>
+{% endblock content %}

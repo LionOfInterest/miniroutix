@@ -1,0 +1,27 @@
+{%extends "layout.html" %}
+
+{%block content %}
+<br>
+<div class="content-section" style="border-radius: 10px;">
+    <br>
+    <center><h2>Serveur Wireguard</h2></center>
+        <p>IP : {{array["Address"]}}</p>
+        <p>Listen Port : {{array["ListenPort"]}}</p>
+    <br>
+</div>
+<div class="content-section" style="border-radius: 10px;">
+    <br>
+    <div class="container">
+        <center><h2>Clients Wireguard</h2></center>
+            {% for client in array2 %}
+                <div class="col-sm" style=" border-radius: 10px;background-color:rgb(238, 238, 238); margin-left: 10px; margin-top: 50px; width: min-content; ">
+                    {% set peer=array2[client] %}
+                    <p>PublicKey : {{peer["PublicKey"]}}</p>
+                    <p>IP : {{peer["AllowedIPs"]}}</p>
+                </div>
+            {% endfor %}
+    </div>
+    <br>
+    <center> <div class="btn"> <a href="/admin"> Retour </a></div> </center>
+</div>
+{%endblock content%}

@@ -1,0 +1,39 @@
+{%extends "layout.html" %}
+
+{%block content %}
+<br>
+<div class="content-section" style=" border-radius: 10px; height: 100%;">
+  <div class="container">
+    <center> <h1> Dashboard MiniRoutix</h1> </center>
+    <br>
+    <i><p> MiniRoutix est la plateforme de gestion des mini-routeurs du réseau MiNET. </p></i>
+    <br>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm" style=" border-radius: 10px;background-color:rgb(238, 238, 238); margin-left: 10px; margin-top: 50px; ">
+        <br>
+        <center> <a href="/create/">Ajouter un mini-routeur</a> </center>
+        <br>
+      </div>
+      <div class="col-sm" style=" border-radius: 10px; background-color: rgb(238, 238, 238); margin-left: 10px; margin-top: 50px;">
+        <br>
+      <center> <a href="/devices">Lister des mini-routeurs</a> </center>
+      <br>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-sm" style=" border-radius: 10px; background-color:rgb(238, 238, 238); margin-left: 10px; margin-top: 50px; ">
+        <br>
+        <center> <a href="/coucou">Mise à jour des mini-routeurs</a> </center>
+        <br>
+      </div>
+      <div class="col-sm" style=" border-radius: 10px; background-color: rgb(238, 238, 238); margin-left: 10px; margin-top: 50px;">
+        <br>
+      <center> <a href="/admin">Administration</a> </center>
+      <br>
+    </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
