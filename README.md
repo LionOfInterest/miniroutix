@@ -1,5 +1,4 @@
-# miniroutix
-
+# Miniroutix
 
 
 ## Getting started
